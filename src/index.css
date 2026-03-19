@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand: #10b981; /* Emerald 500 */
+  --color-surface: #0A0A0A; /* Iron Slate Background */
+  --color-card: #141414; /* Iron Slate Card */
+  --color-border-slate: #1F1F1F; /* Iron Slate Border */
+  --color-muted: #71717a; /* Zinc 500 */
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-zinc-100 antialiased;
+  }
+}
+
+/* Custom scrollbar for a cleaner look */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full;
+}
